@@ -35,7 +35,6 @@ const categories = [
   },
 ];
 
-
 const Directory = () => {
   return (
     <DirectoryContainer>
