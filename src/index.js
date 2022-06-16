@@ -6,6 +6,9 @@ import { store, persistor } from './store/store';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
+
+import { Elements } from '@stripe/react-stripe-js';
+import { stripePromise } from './utils/stripe/stripe.utils';
 // import { UserProvider } from './contexts/user.context';
 // import { CategoriesProvider } from './contexts/categories.context';
 // import { CartProvider } from './contexts/cart.context';
@@ -16,6 +19,7 @@ root.render(
     <Provider store={store}>
       <PersistGate loading = {null} persistor={persistor}>
     <BrowserRouter>
+    <Elements stripe={stripePromise}>
       {/* <UserProvider> */}
         {/* <CategoriesProvider>
           <CartProvider> */}
@@ -23,6 +27,7 @@ root.render(
           {/* </CartProvider>
         </CategoriesProvider> */}
       {/* </UserProvider> */}
+      </Elements>
     </BrowserRouter>
       </PersistGate>
     </Provider>
