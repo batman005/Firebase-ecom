@@ -28,6 +28,6 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   @media (max-width: 800px){
-    padding: 3px 8px;
+    padding: 3px 4px;
   }
 `;
