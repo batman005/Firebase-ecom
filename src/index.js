@@ -7,6 +7,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import * as serviceWorker from './serviceWorkerRegistration';
 import { Elements } from '@stripe/react-stripe-js';
 import { stripePromise } from './utils/stripe/stripe.utils';
 // import { UserProvider } from './contexts/user.context';
@@ -33,3 +34,6 @@ root.render(
     </Provider>
   </React.StrictMode>,
 );
+
+
+serviceWorker.register();
